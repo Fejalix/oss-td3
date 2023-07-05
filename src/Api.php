@@ -16,6 +16,10 @@ class Api
         $this->client = $client;
     }
 
+    /**
+     * @return array<string, array<string>>
+     */
+
     public function getAllCharacters(): array
     {
         $response = $this->client->request(
@@ -42,7 +46,12 @@ class Api
         return $characters;
     }
 
-    private function extractStudentsFromElement($element): array
+    /**
+     *  * @param \DOMNode $element
+     * @return array<string>
+     */
+    private function extractStudentsFromElement(\DOMNode $element): array
+
     {
         $students = [];
 
