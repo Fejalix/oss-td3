@@ -1,0 +1,31 @@
+{
+    "name": "felixjanot/oss-td3",
+    "description": "List Hearthstone",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Felixjanot\\OssTd3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CrevetteFejalix",
+            "email": "felix.janot75@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "symfony/http-client": "^6.3",
+        "symfony/dom-crawler": "^6.3",
+        "symfony/css-selector": "^6.3"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.6||^10.2"
+    },
+    "scripts": {
+        "phpstan": "@php vendor/bin/phpstan analyse src --level=max",
+        "test": "@php vendor/bin/phpunit tests"
+    }
+}
